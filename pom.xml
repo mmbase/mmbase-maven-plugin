@@ -149,6 +149,11 @@ The most important goal is 'create-index-files' which automaticly creates 'INDEX
                 </goals>
               </execution>
             </executions>
+            <configuration>
+              <doclint>none</doclint>
+              <failOnError>false</failOnError>
+              <notimestamp>true</notimestamp>
+            </configuration>
           </plugin>
         </plugins>
       </build>
