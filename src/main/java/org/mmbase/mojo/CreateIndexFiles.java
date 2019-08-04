@@ -40,10 +40,17 @@ public class CreateIndexFiles extends AbstractMojo {
     public void execute() {
         if (classesDirectory != null && classesDirectory.exists()) {
             File configDir = new File(classesDirectory, File.separator + "org" + File.separator
-                                      + "mmbase" + File.separator + "config");
+                + "mmbase" + File.separator + "config");
             if (configDir.exists()) {
+                getLog().info("Found " +  configDir);
                 createIndex(configDir);
+            } else {
+                getLog().info("Not found " +  configDir);
+
             }
+        } else {
+            getLog().info("Not found " +  classesDirectory);
+
         }
     }
 
@@ -63,12 +70,15 @@ public class CreateIndexFiles extends AbstractMojo {
     }
 
     private void writeIndex(File dir, File index) {
-        getLog().debug("Generating " + index);
+        getLog().info("Generating " + index);
         BufferedWriter w = null;
         try {
             w = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(index), "UTF-8"));
             String files[] = dir.list();
             for (int i = 0; i < files.length; i++) {
+                if ("INDEX".equals(files[i])) {
+                    continue;
+                }
                 File file = new File(dir, files[i]);
                 w.write(files[i]);
                 if (file.isDirectory()) {
