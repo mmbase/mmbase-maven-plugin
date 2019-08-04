@@ -10,7 +10,24 @@
   <packaging>maven-plugin</packaging>
   <description>This provides a maven plugin for mmbase builds.
 
-The most important goal is 'create-index-files' which automaticly creates 'INDEX' files which are understood by the mmbase resource loader.</description>
+The most important goal is 'create-index-files' which automaticl  creates 'INDEX' files which are understood by the mmbase resource loader.</description>
+
+  <url>https://github.com/mmbase/mmbase-maven-plugin</url>
+
+  <developers>
+    <developer>
+      <id>mihxil</id>
+      <name>Michiel Meeuwissen</name>
+      <email>michiel.meeuwissen+github@gmail.com</email>
+      <url>https://www.meeuw.org</url>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>Europe/Amsterdam</timezone>
+    </developer>
+  </developers>
+
 
 
   <licenses>
