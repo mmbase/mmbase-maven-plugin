@@ -87,7 +87,7 @@ The most important goal is 'create-index-files' which automaticl  creates 'INDEX
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
       <artifactId>plexus-utils</artifactId>
-      <version>1.5.1</version>
+      <version>3.0.24</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
